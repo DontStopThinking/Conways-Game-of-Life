@@ -35,6 +35,7 @@ int main()
 	std::printf("\n\n");
 
 	InitWindow(winWidth, winHeight, "Conway's Game of Life");
+	SetWindowIcon(LoadImage("icon.png"));
 
 	SetTargetFPS(60);
 
