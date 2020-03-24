@@ -4,6 +4,6 @@
 
 struct Cell
 {
-	int size;
-	int value;	// either 0 or 1
+    int size;
+    int value;	// either 0 or 1
 };

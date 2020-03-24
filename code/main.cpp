@@ -1,12 +1,12 @@
 /*
 Conway's game of life rules:
 For living cell:
-	- less than 2 living neighbors = die (underpopulation)
-	- 2 or 3 living neighbors = live
-	- more than 3 living neighbors = die (overpopulation)
+    - less than 2 living neighbors = die (underpopulation)
+    - 2 or 3 living neighbors = live
+    - more than 3 living neighbors = die (overpopulation)
 
 For dead cell:
-	- 3 living neighbors = come to life
+    - 3 living neighbors = come to life
 */
 #include <cstdio>
 #include "raylib.h"
@@ -27,55 +27,55 @@ GameOfLife simulation(winWidth, winHeight, cellSize);
 
 int main()
 {
-	std::printf("Conway's Game of Life\n");
-	std::printf("Space to run/pause the simulation\n");
-	std::printf("Left click when paused to create a cell\n");
-	std::printf("Right click when paused to remove a cell\n");
-	std::printf("c to clear the field\n");
-	std::printf("\n\n");
+    std::printf("Conway's Game of Life\n");
+    std::printf("Space to run/pause the simulation\n");
+    std::printf("Left click when paused to create a cell\n");
+    std::printf("Right click when paused to remove a cell\n");
+    std::printf("c to clear the field\n");
+    std::printf("\n\n");
 
-	InitWindow(winWidth, winHeight, "Conway's Game of Life");
-	SetWindowIcon(LoadImage("icon.png"));
+    InitWindow(winWidth, winHeight, "Conway's Game of Life");
+    SetWindowIcon(LoadImage("icon.png"));
 
-	SetTargetFPS(60);
+    SetTargetFPS(60);
 
-	while (!WindowShouldClose())
-	{
-		updateAndDrawGame();
-	}
+    while (!WindowShouldClose())
+    {
+        updateAndDrawGame();
+    }
 
-	CloseWindow();
+    CloseWindow();
 
-	return 0;
+    return 0;
 }
 
 void updateGame(void)
 {
-	simulation.run();
+    simulation.run();
 }
 
 void drawGame(void)
 {
-	BeginDrawing();
+    BeginDrawing();
 
-	ClearBackground(windowClearColor);
+    ClearBackground(windowClearColor);
 
-	simulation.draw();
+    simulation.draw();
 
-	if (simulation.isSimulationInProgress())
-	{
-		DrawText("Simulation: ON", 10, 10, 25, textColor);
-	}
-	else
-	{
-		DrawText("Simulation: OFF", 10, 10, 25, textColor);
-	}
+    if (simulation.isSimulationInProgress())
+    {
+        DrawText("Simulation: ON", 10, 10, 25, textColor);
+    }
+    else
+    {
+        DrawText("Simulation: OFF", 10, 10, 25, textColor);
+    }
 
-	EndDrawing();
+    EndDrawing();
 }
 
 void updateAndDrawGame(void)
 {
-	updateGame();
-	drawGame();
+    updateGame();
+    drawGame();
 }
