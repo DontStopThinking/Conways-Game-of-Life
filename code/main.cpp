@@ -8,7 +8,7 @@ For living cell:
 For dead cell:
     - 3 living neighbors = come to life
 */
-#include <cstdio>
+#include <iostream>
 #include "raylib.h"
 
 #include "game_of_life.h"
@@ -18,21 +18,23 @@ void drawGame(void);
 void updateGame(void);
 void updateAndDrawGame(void);
 
-// window has to be square
+// window needs to be square
 constexpr int winWidth = 600;
 constexpr int winHeight = 600;
-int cellSize = 10;
+int m_cellSize = 10;
 
-GameOfLife simulation(winWidth, winHeight, cellSize);
+GameOfLife simulation(winWidth, winHeight, m_cellSize);
 
 int main()
 {
-    std::printf("Conway's Game of Life\n");
-    std::printf("Space to run/pause the simulation\n");
-    std::printf("Left click when paused to create a cell\n");
-    std::printf("Right click when paused to remove a cell\n");
-    std::printf("c to clear the field\n");
-    std::printf("\n\n");
+    std::cout << "\tCONWAY'S GAME OF LIFE\n\n";
+    std::cout << "\"Space\" to run/pause the simulation\n";
+    std::cout << "\"Left click\" when paused to create a cell\n";
+    std::cout << "\"Right click\" when paused to remove a cell\n";
+    std::cout << "\"C\" to clear the field\n";
+    std::cout << "\"BLACK\" = Dead cell\n";
+    std::cout << "\"GRAY\" = Living cell\n";
+    std::cout << "\n\n";
 
     InitWindow(winWidth, winHeight, "Conway's Game of Life");
     SetWindowIcon(LoadImage("icon.png"));
