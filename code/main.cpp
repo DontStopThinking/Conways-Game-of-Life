@@ -28,12 +28,18 @@ GameOfLife simulation(winWidth, winHeight, m_cellSize);
 int main()
 {
     std::cout << "\tCONWAY'S GAME OF LIFE\n\n";
-    std::cout << "\"Space\" to run/pause the simulation\n";
-    std::cout << "\"Left click\" when paused to create a cell\n";
-    std::cout << "\"Right click\" when paused to remove a cell\n";
-    std::cout << "\"C\" to clear the field\n";
-    std::cout << "\"BLACK\" = Dead cell\n";
-    std::cout << "\"GRAY\" = Living cell\n";
+    std::cout << "\t  - by Shantanu Balse\n";
+    std::cout << "\t    (github.com/shantanubalse)\n\n";
+
+    std::cout << "Basic Controls:\n";
+    std::cout << "  Space: run/pause the simulation\n";
+    std::cout << "  Left click: place new cell when paused\n";
+    std::cout << "  Right click: remove cell when paused\n";
+    std::cout << "  C: remove all cells\n\n";
+
+    std::cout << "Colors:\n";
+    std::cout << "  BLACK: Dead cell\n";
+    std::cout << "  GRAY: Living cell\n";
     std::cout << "\n\n";
 
     InitWindow(winWidth, winHeight, "Conway's Game of Life");

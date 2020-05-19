@@ -143,6 +143,7 @@
     <ClInclude Include="code\cell.h" />
     <ClInclude Include="code\colors.h" />
     <ClInclude Include="code\game_of_life.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
