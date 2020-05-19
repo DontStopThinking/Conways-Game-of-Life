@@ -54,7 +54,7 @@ void GameOfLife::randomizeGrid()
             }
         }
     }
-    updatem_frontGrid();
+    update_frontGrid();
 }
 
 int GameOfLife::getCell(int x, int y)
@@ -76,7 +76,7 @@ void GameOfLife::clearGrid()
             m_backGrid[i][j].value = 0;
         }
     }
-    updatem_frontGrid();
+    update_frontGrid();
 }
 
 void GameOfLife::setGrid()
@@ -85,13 +85,13 @@ void GameOfLife::setGrid()
     {
         for (size_t j = 0; j < m_fieldHeight / m_cellSize; j++)
         {
-            m_backGrid[i][j].value = 1;
+            m_backGrid[i][j].value = 0;
         }
     }
-    updatem_frontGrid();
+    update_frontGrid();
 }
 
-void GameOfLife::updatem_frontGrid()
+void GameOfLife::update_frontGrid()
 {
     for (size_t i = 0; i < m_fieldWidth / m_cellSize; i++)
     {
@@ -117,7 +117,7 @@ void GameOfLife::handleInput()
     {
         if (m_runSimulation == false)
         {
-            std::printf("Simulation run...\n");
+            std::printf("Simulation running...\n");
             m_runSimulation = true;
             SetTargetFPS(10);
         }
@@ -138,7 +138,7 @@ void GameOfLife::handleInput()
             mouseY = GetMouseY() / m_cellSize;
             //std::printf("mouseX: %d, mouseY: %d\n", mouseX, mouseY);
             m_backGrid[mouseX][mouseY].value = 1;
-            updatem_frontGrid();
+            update_frontGrid();
         }
         else if (IsMouseButtonPressed(MOUSE_RIGHT_BUTTON))
         {
@@ -146,7 +146,7 @@ void GameOfLife::handleInput()
             mouseY = GetMouseY() / m_cellSize;
             //std::printf("mouseX: %d, mouseY: %d\n", mouseX, mouseY);
             m_backGrid[mouseX][mouseY].value = 0;
-            updatem_frontGrid();
+            update_frontGrid();
         }
         else if (IsKeyPressed(KEY_C))
         {
@@ -159,7 +159,7 @@ void GameOfLife::updateGrid()
 {
     if (m_runSimulation)
     {
-        updatem_frontGrid();
+        update_frontGrid();
 
         for (size_t x = 1; x < (m_fieldWidth / m_cellSize) - 1; x++)
         {
