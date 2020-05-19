@@ -3,7 +3,7 @@ Conway's Game of Life simulation made using C++ and Raylib
 
 ![](https://raw.githubusercontent.com/ShantanuBalse/Conways-Game-of-Life/master/screenshots/conway2.gif)
 
-### Controls
+## Basic Controls
   - Spacebar to start/pause simulation
   - C to clear the field when paused
   - Left-click to place a cell when paused
