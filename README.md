@@ -9,6 +9,6 @@ Conway's Game of Life simulation made using C++ and Raylib
   - Left-click: place a cell when paused
   - Right-click: remove a cell when paused
   
-  Colors:
-    - Black: dead cell
-    - Gray: live cell
+## Colors:
+  - Black: dead cell
+  - Gray: live cell
