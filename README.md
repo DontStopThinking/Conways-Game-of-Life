@@ -21,4 +21,4 @@ Conway's Game of Life simulation made using C++ and Raylib
   
 ## Colors
   - Black: dead cell
-  - Gray: live cell
+  - White: live cell
