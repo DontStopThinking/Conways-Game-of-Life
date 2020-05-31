@@ -3,7 +3,10 @@ Conway's Game of Life simulation made using C++ and Raylib
 
 ![](https://raw.githubusercontent.com/ShantanuBalse/Conways-Game-of-Life/master/screenshots/conway2.gif)
 
-## Rules:
+## Download
+  - [Windows](https://github.com/ShantanuBalse/Conways-Game-of-Life/releases/download/1.0/conways_game_of_life.v1.0.zip)
+
+## Rules
   On each iteration, check all the 8 neighbors of each cell.
   Then, for a living cell, if the cell:
   - has less than 2 living neighbors, it dies (underpopulation)
